@@ -2,6 +2,7 @@ import { handle } from 'hono/vercel'
 import configOpenAPI from './lib/openapi'
 import { createBaseRouter } from './lib/router'
 import healthRouter from './routes/health'
+import valorantRouter from './routes/valorant'
 
 export const config = {
   runtime: 'edge',
@@ -9,7 +10,7 @@ export const config = {
 
 const app = createBaseRouter()
 
-const routes = [healthRouter]
+const routes = [healthRouter, valorantRouter]
 
 configOpenAPI(app)
 

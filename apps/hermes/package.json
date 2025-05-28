@@ -11,9 +11,10 @@
     "clean": "git clean -xdf node_modules dist"
   },
   "dependencies": {
+    "@ezcmd/statix": "workspace:*",
     "@hono/zod-openapi": "^0.19.6",
     "@hono/zod-validator": "^0.6.0",
-    "@ezcmd/statix": "workspace:*",
+    "axios": "^1.9.0",
     "hono": "^4.7.10",
     "hono-openapi": "^0.4.8",
     "zod": "^3.25.28",
