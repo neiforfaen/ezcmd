@@ -1,0 +1,7 @@
+{
+  "extends": ["@ezcmd/ts-config/base.json"],
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules"]
+}
