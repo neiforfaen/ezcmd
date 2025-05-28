@@ -8,12 +8,12 @@ const configOpenAPI = (api: BaseRouter) => {
     openAPISpecs(api, {
       documentation: {
         info: {
-          title: 'easycmd hermes openapi spec',
+          title: 'ezcmd hermes openapi spec',
           version: packageJson.version,
           description: packageJson.description,
         },
         servers: [
-          { url: 'https://api.kaiden.sh/easycmd', description: 'Production' },
+          { url: 'https://api.kaiden.sh/ezcmd', description: 'Production' },
         ],
       },
     })
