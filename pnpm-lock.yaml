@@ -89,6 +89,15 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
 
+  packages/testing:
+    devDependencies:
+      '@ezcmd/ts-config':
+        specifier: workspace:*
+        version: link:../ts-config
+      vitest:
+        specifier: ^3.1.4
+        version: 3.1.4(@edge-runtime/vm@3.2.0)(@types/node@22.15.23)(yaml@2.8.0)
+
   packages/ts-config: {}
 
 packages:
