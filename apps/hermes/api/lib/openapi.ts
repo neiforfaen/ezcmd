@@ -12,9 +12,7 @@ const configOpenAPI = (api: BaseRouter) => {
           version: packageJson.version,
           description: packageJson.description,
         },
-        servers: [
-          { url: 'https://api.kaiden.sh/ezcmd', description: 'Production' },
-        ],
+        servers: [{ url: 'https://api.kaiden.sh', description: 'Production' }],
       },
     })
   )
