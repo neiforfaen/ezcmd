@@ -12,7 +12,13 @@ const configOpenAPI = (api: BaseRouter) => {
           version: packageJson.version,
           description: packageJson.description,
         },
-        servers: [{ url: 'https://api.kaiden.sh', description: 'Production' }],
+        servers: [
+          { url: 'https://api.kaiden.sh', description: 'Production' },
+          {
+            url: 'https://ezcmd-hermes.vercel.app',
+            description: 'Development',
+          },
+        ],
       },
     })
   )
