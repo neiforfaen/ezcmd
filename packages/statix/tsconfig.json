@@ -1,0 +1,3 @@
+{
+  "extends": ["@ezcmd/tsconfig/base.json"]
+}

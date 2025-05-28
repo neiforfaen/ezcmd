@@ -1,0 +1,39 @@
+{
+  "name": "ezcmd",
+  "description": "Easily add commands in a formatted way suitable for use on streaming platforms.",
+  "license": "MIT",
+  "version": "0.1.0",
+  "author": {
+    "name": "neiforfaen",
+    "url": "https://kaiden.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neiforfaen/rankmsg.git"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "test": "turbo test",
+    "format": "ultracite format",
+    "lint": "ultracite lint",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf node_modules dist",
+    "clean:all": "turbo clean",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@ezcmd/ts-config": "workspace:*",
+    "@types/node": "^22.15.17",
+    "husky": "^9.1.7",
+    "turbo": "^2.5.3",
+    "typescript": "^5.8.3",
+    "ultracite": "4.2.5",
+    "vitest": "^3.1.4"
+  },
+  "packageManager": "pnpm@10.9.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

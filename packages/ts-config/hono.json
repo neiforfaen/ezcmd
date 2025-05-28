@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Hono Default",
+  "extends": ["./base.json"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext"
+  }
+}
