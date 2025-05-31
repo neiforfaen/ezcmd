@@ -43,12 +43,12 @@ const PlayerNotFoundSchema = z.object({
   message: z.literal('Player not found'),
 })
 
-const ErrorSchema = z.object({
-  error: z.union([
-    z.literal(statusPhrases.BAD_REQUEST),
-    z.literal(statusPhrases.INTERNAL_SERVER_ERROR),
-    z.string(), // Defined error message
-  ]),
+const ServerErrorSchema = z.object({
+  error: z.union([z.literal(statusPhrases.INTERNAL_SERVER_ERROR), z.string()]),
+})
+
+const BadRequestSchema = z.object({
+  error: z.literal(statusPhrases.BAD_REQUEST),
 })
 
 // Formatted rank response
@@ -67,7 +67,7 @@ valorantRouter.get(
       400: {
         description: 'Invalid region or missing name/tag',
         content: {
-          'application/json': { schema: resolver(ErrorSchema) },
+          'application/json': { schema: resolver(BadRequestSchema) },
         },
       },
       404: {
@@ -79,7 +79,7 @@ valorantRouter.get(
       500: {
         description: 'Internal server error',
         content: {
-          'application/json': { schema: resolver(ErrorSchema) },
+          'application/json': { schema: resolver(ServerErrorSchema) },
         },
       },
     },
@@ -137,7 +137,7 @@ valorantRouter.get(
       400: {
         description: 'Invalid region or missing name/tag',
         content: {
-          'application/json': { schema: resolver(ErrorSchema) },
+          'application/json': { schema: resolver(BadRequestSchema) },
         },
       },
       404: {
@@ -149,7 +149,7 @@ valorantRouter.get(
       500: {
         description: 'Internal server error',
         content: {
-          'application/json': { schema: resolver(ErrorSchema) },
+          'application/json': { schema: resolver(ServerErrorSchema) },
         },
       },
     },
