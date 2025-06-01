@@ -87,6 +87,7 @@ valorantRouter.get(
   async (c) => {
     try {
       const { name, tag, region } = c.req.param()
+      const { style } = c.req.query()
       const VAL_API_KEY = c.get('VAL_API_KEY')
 
       if (!isValidRegion(region) || !name || !tag) {
@@ -108,9 +109,19 @@ valorantRouter.get(
         return c.json({ message: 'Player not found' }, statusCodes.NOT_FOUND)
       }
 
+      let messageStr = `${current_data.currenttierpatched} [${current_data.ranking_in_tier}RR] | Peak: ${highest_rank.patched_tier} @ ${highest_rank.season}`
+
+      if (style === 'minimal') {
+        messageStr = `${current_data.currenttierpatched} [${current_data.ranking_in_tier}RR]`
+      } else if (style === 'rankOnly') {
+        messageStr = `${current_data.currenttierpatched}`
+      } else if (style === 'peakOnly') {
+        messageStr = `${highest_rank.patched_tier} @ ${highest_rank.season}`
+      }
+
       return c.json(
         {
-          message: `${current_data.currenttierpatched} [${current_data.ranking_in_tier}RR] | Peak: ${highest_rank.patched_tier} @ ${highest_rank.season}`,
+          message: messageStr,
         },
         statusCodes.OK
       )
