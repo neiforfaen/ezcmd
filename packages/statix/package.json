@@ -10,7 +10,7 @@
   "main": "index.ts",
   "devDependencies": {
     "@ezcmd/ts-config": "workspace:*",
-    "@types/node": "^22.15.17",
+    "@types/node": "^22.15.29",
     "typescript": "^5.8.3"
   },
   "dependencies": {

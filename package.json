@@ -25,7 +25,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@ezcmd/ts-config": "workspace:*",
-    "@types/node": "^22.15.17",
+    "@types/node": "^22.15.29",
     "husky": "^9.1.7",
     "turbo": "^2.5.3",
     "typescript": "^5.8.3",
