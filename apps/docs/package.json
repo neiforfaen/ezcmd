@@ -20,7 +20,7 @@
     "shiki": "^3.4.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.7",
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/mdx": "^2.0.13",
     "@types/node": "22.15.29",
     "@types/react": "^19.1.5",
