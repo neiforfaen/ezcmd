@@ -10,7 +10,7 @@
     "gen:docs": "node ./scripts/generate-docs.mjs"
   },
   "dependencies": {
-    "fumadocs-core": "15.4.2",
+    "fumadocs-core": "15.6.0",
     "fumadocs-mdx": "11.6.6",
     "fumadocs-openapi": "^9.0.4",
     "fumadocs-ui": "15.5.0",
